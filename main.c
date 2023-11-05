@@ -80,6 +80,7 @@ int main(int argc, char **argv) {
 
 	generateRandomMatrix(C, n, 0, 0);
 
+
 	launchThreads(numThreads);
 
     printMatrix(C, n);

@@ -1,19 +1,20 @@
-all:mmm
 
-mmm:	main.o initMatrix.o displayMatrix.o multiThreadedProgramExample.o
-	gcc -Wall main.o initMatrix.o displayMatrix.o multiThreadedProgramExample.o -lpthread -lm -o mmm
+all:  mmm
 
-main.o:	main.c
-	gcc -c main.c -o main.o
+mmm:  main.o initMatrix.o displayMatrix.o multiThreadedProgramExample.o
+  gcc -Wall main.o initMatrix.o displayMatrix.o multiThreadedProgramExample.o -lpthread -lm -o mmm
 
-initMatrix.o:	initMatrix.c
-	gcc -c initMatrix.c -o initMatrix.o
-	
-displayMatrix.o:	displayMatrix.c
-	gcc -c displayMatrix.c -o displayMatrix.o
+main.o:  main.c
+  gcc -c main.c -o main.o
 
-multiThreadedProgramExample.o:	multiThreadedProgramExample.c
-	gcc -c multiThreadedProgramExample.c -o multiThreadedProgramExample.o	
+initMatrix.o:  initMatrix.c
+  gcc -c initMatrix.c -o initMatrix.o
+  
+displayMatrix.o:  displayMatrix.c
+  gcc -c displayMatrix.c -o displayMatrix.o
+
+multiThreadedProgramExample.o:  multiThreadedProgramExample.c
+  gcc -c multiThreadedProgramExample.c -o multiThreadedProgramExample.o  
 
 clean:
-	rm -fr mmm *.o
+  rm -fr mmm *.o
